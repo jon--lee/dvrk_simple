@@ -7,7 +7,6 @@ from keras import losses
 from keras import backend
 import matplotlib.pyplot as plt
 import IPython
-from numba import jit
 import os
 from sklearn.model_selection import train_test_split
 import pickle
@@ -37,7 +36,6 @@ class Network:
         self.mean = None
         self.std = None
 
-    @jit
     def whiten(self, X):
         X = X - self.mean
         X = X / self.std
@@ -47,7 +45,6 @@ class Network:
         X[locs] = 0.0
         return X
 
-    @jit
     def params(self, X):
         self.mean = np.mean(X, axis=0)
         self.std = np.std(X, axis=0)

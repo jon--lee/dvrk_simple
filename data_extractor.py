@@ -90,6 +90,7 @@ def main():
 
     print "Control at init stat after loading: " + str(lnr.intended_action(X[0]))
 
+    
 
 
 
