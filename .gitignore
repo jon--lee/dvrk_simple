@@ -1,0 +1,9 @@
+tmp/
+demos/
+*.jpg
+*.png
+*.jpeg
+*.svg
+*.pyc
+*.swp
+
